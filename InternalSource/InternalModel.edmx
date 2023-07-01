@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="InternalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBL_INV_CO_DESPACHADAS_N">
+          <Key>
+            <PropertyRef Name="id_co_despachadas" />
+          </Key>
+          <Property Name="id_co_despachadas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="whse" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="item_name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="co_desp" Type="numeric" Precision="16" Scale="4" />
+          <Property Name="fecha_actualizacion" Type="date" />
+          <Property Name="number_1" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="number_2" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="vchar_1" Type="varchar" MaxLength="2000" />
+          <Property Name="vchar_2" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="TBL_INV_NP_COMPROMETIDAS_N">
+          <Key>
+            <PropertyRef Name="id_np_comprometidas" />
+          </Key>
+          <Property Name="id_np_comprometidas" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="sticker" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="id_alm_ent" Type="nvarchar" MaxLength="12" Nullable="false" />
+          <Property Name="org_lvl_child" Type="numeric" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="id_estado" Type="numeric" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="fecha_actualizacion" Type="date" Nullable="false" />
+          <Property Name="qty_pend" Type="numeric" Precision="5" Scale="0" />
+          <Property Name="sku_id" Type="varchar" MaxLength="100" />
+          <Property Name="number_1" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="number_2" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="vchar_1" Type="varchar" MaxLength="2000" />
+          <Property Name="vchar_2" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityType Name="TBL_INV_UBICACIONES_N">
+          <Key>
+            <PropertyRef Name="id_ubicacion" />
+          </Key>
+          <Property Name="id_ubicacion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="id_item" Type="numeric" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="whse" Type="varchar" MaxLength="16" Nullable="false" />
+          <Property Name="sku_id" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="prd_lvl_child" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ubicacion" Type="varchar" MaxLength="3" />
+          <Property Name="fecha_actualizacion" Type="date" Nullable="false" />
+          <Property Name="on_hand_qty" Type="numeric" Precision="23" Scale="5" />
+          <Property Name="wms_locn_id" Type="varchar" MaxLength="10" />
+          <Property Name="number_1" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="number_2" Type="numeric" Precision="18" Scale="0" />
+          <Property Name="vchar_1" Type="varchar" MaxLength="2000" />
+          <Property Name="vchar_2" Type="varchar" MaxLength="2000" />
+        </EntityType>
+        <EntityContainer Name="InternalModelStoreContainer">
+          <EntitySet Name="TBL_INV_CO_DESPACHADAS_N" EntityType="Self.TBL_INV_CO_DESPACHADAS_N" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_INV_NP_COMPROMETIDAS_N" EntityType="Self.TBL_INV_NP_COMPROMETIDAS_N" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TBL_INV_UBICACIONES_N" EntityType="Self.TBL_INV_UBICACIONES_N" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InternalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="TBL_INV_CO_DESPACHADAS_N">
+          <Key>
+            <PropertyRef Name="id_co_despachadas" />
+          </Key>
+          <Property Name="id_co_despachadas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="whse" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="item_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="co_desp" Type="Decimal" Precision="16" Scale="4" />
+          <Property Name="fecha_actualizacion" Type="DateTime" Precision="0" />
+          <Property Name="number_1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="number_2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="vchar_1" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="vchar_2" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_INV_NP_COMPROMETIDAS_N">
+          <Key>
+            <PropertyRef Name="id_np_comprometidas" />
+          </Key>
+          <Property Name="id_np_comprometidas" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="sticker" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="id_alm_ent" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="org_lvl_child" Type="Decimal" Precision="12" Scale="0" Nullable="false" />
+          <Property Name="id_estado" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+          <Property Name="fecha_actualizacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="qty_pend" Type="Decimal" Precision="5" Scale="0" />
+          <Property Name="sku_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="number_1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="number_2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="vchar_1" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="vchar_2" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="TBL_INV_UBICACIONES_N">
+          <Key>
+            <PropertyRef Name="id_ubicacion" />
+          </Key>
+          <Property Name="id_ubicacion" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="id_item" Type="Decimal" Precision="9" Scale="0" Nullable="false" />
+          <Property Name="whse" Type="String" MaxLength="16" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="sku_id" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="prd_lvl_child" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ubicacion" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+          <Property Name="fecha_actualizacion" Type="DateTime" Nullable="false" Precision="0" />
+          <Property Name="on_hand_qty" Type="Decimal" Precision="23" Scale="5" />
+          <Property Name="wms_locn_id" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="number_1" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="number_2" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="vchar_1" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+          <Property Name="vchar_2" Type="String" MaxLength="2000" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="IntenalContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TBL_INV_CO_DESPACHADAS_N" EntityType="Self.TBL_INV_CO_DESPACHADAS_N" />
+          <EntitySet Name="TBL_INV_NP_COMPROMETIDAS_N" EntityType="Self.TBL_INV_NP_COMPROMETIDAS_N" />
+          <EntitySet Name="TBL_INV_UBICACIONES_N" EntityType="Self.TBL_INV_UBICACIONES_N" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InternalModelStoreContainer" CdmEntityContainer="IntenalContext">
+          <EntitySetMapping Name="TBL_INV_CO_DESPACHADAS_N">
+            <EntityTypeMapping TypeName="InternalModel.TBL_INV_CO_DESPACHADAS_N">
+              <MappingFragment StoreEntitySet="TBL_INV_CO_DESPACHADAS_N">
+                <ScalarProperty Name="id_co_despachadas" ColumnName="id_co_despachadas" />
+                <ScalarProperty Name="whse" ColumnName="whse" />
+                <ScalarProperty Name="item_name" ColumnName="item_name" />
+                <ScalarProperty Name="co_desp" ColumnName="co_desp" />
+                <ScalarProperty Name="fecha_actualizacion" ColumnName="fecha_actualizacion" />
+                <ScalarProperty Name="number_1" ColumnName="number_1" />
+                <ScalarProperty Name="number_2" ColumnName="number_2" />
+                <ScalarProperty Name="vchar_1" ColumnName="vchar_1" />
+                <ScalarProperty Name="vchar_2" ColumnName="vchar_2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_INV_NP_COMPROMETIDAS_N">
+            <EntityTypeMapping TypeName="InternalModel.TBL_INV_NP_COMPROMETIDAS_N">
+              <MappingFragment StoreEntitySet="TBL_INV_NP_COMPROMETIDAS_N">
+                <ScalarProperty Name="id_np_comprometidas" ColumnName="id_np_comprometidas" />
+                <ScalarProperty Name="sticker" ColumnName="sticker" />
+                <ScalarProperty Name="id_alm_ent" ColumnName="id_alm_ent" />
+                <ScalarProperty Name="org_lvl_child" ColumnName="org_lvl_child" />
+                <ScalarProperty Name="id_estado" ColumnName="id_estado" />
+                <ScalarProperty Name="fecha_actualizacion" ColumnName="fecha_actualizacion" />
+                <ScalarProperty Name="qty_pend" ColumnName="qty_pend" />
+                <ScalarProperty Name="sku_id" ColumnName="sku_id" />
+                <ScalarProperty Name="number_1" ColumnName="number_1" />
+                <ScalarProperty Name="number_2" ColumnName="number_2" />
+                <ScalarProperty Name="vchar_1" ColumnName="vchar_1" />
+                <ScalarProperty Name="vchar_2" ColumnName="vchar_2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TBL_INV_UBICACIONES_N">
+            <EntityTypeMapping TypeName="InternalModel.TBL_INV_UBICACIONES_N">
+              <MappingFragment StoreEntitySet="TBL_INV_UBICACIONES_N">
+                <ScalarProperty Name="id_ubicacion" ColumnName="id_ubicacion" />
+                <ScalarProperty Name="id_item" ColumnName="id_item" />
+                <ScalarProperty Name="whse" ColumnName="whse" />
+                <ScalarProperty Name="sku_id" ColumnName="sku_id" />
+                <ScalarProperty Name="prd_lvl_child" ColumnName="prd_lvl_child" />
+                <ScalarProperty Name="ubicacion" ColumnName="ubicacion" />
+                <ScalarProperty Name="fecha_actualizacion" ColumnName="fecha_actualizacion" />
+                <ScalarProperty Name="on_hand_qty" ColumnName="on_hand_qty" />
+                <ScalarProperty Name="wms_locn_id" ColumnName="wms_locn_id" />
+                <ScalarProperty Name="number_1" ColumnName="number_1" />
+                <ScalarProperty Name="number_2" ColumnName="number_2" />
+                <ScalarProperty Name="vchar_1" ColumnName="vchar_1" />
+                <ScalarProperty Name="vchar_2" ColumnName="vchar_2" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
